@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded',()=>{
             let ul= document.querySelector('#dog-breeds')
             li.textContent = breed;
             ul.appendChild(li);
+            li.addEventListener('click',()=>{
+                li.style.color = 'orange'
+            })
         }
     })
 })
