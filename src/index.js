@@ -25,4 +25,19 @@ document.addEventListener('DOMContentLoaded',()=>{
             })
         }
     })
+    const dropdown = document.querySelector('#breed-dropdown');
+    dropdown.addEventListener('change',()=>{
+        let breedList = document.querySelector('#dog-breeds')
+        let list = breedList.querySelectorAll('li')
+        debugger
+        list.forEach(li=>{
+            breed = li.textContent
+            debugger
+            if (breed[0] !== dropdown.value) {
+                li.style.display = 'none'
+            } else {
+                li.style.display = 'list-item'
+            }
+        })
+    })
 })
